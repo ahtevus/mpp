@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html> 
+
+    <head> 
+        <meta charset="utf-8"> 
+        <title>ELC Mustache</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>	
+        <script src="mustache.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+        <script type="text/javascript" src="./js/main.js"></script> 
+        <script type="text/javascript" src="./js/scrollHandler.js"></script>
+        <script type="text/javascript" src="./js/slider.js"></script>  
+    </head>
+
+    <body style="margin-right: 0px; margin-left: 0px;margin-bottom: 0px;"> 
+        
+        <!-- floating button -->
+        <button id="myBtn" title="Go to top" onclick="topFunction()">
+            <i class="fa fa-angle-up"></i>
+        </button>  
+
+        <!-- header and menu view loaded from Mustache -->
+        <div class="header">
+            <!-- first row -->
+            <div style="display:flex">
+                <div class="header header__language">
+                    <div class="header__language-wrap">
+                        <img src="assets/image/flag.png" style="height: 11px;width: 24px;" alt="flag">
+                        <div class="header__language-wrap--language">
+                            - ENGLISH
+                        </div>
+                    </div>
+                    <div class="header__email-wrap">
+                        <div class="header__email-wrap--email">EMAIL SIGN UP</div>
+                    </div>
+                </div>
+                <div class="header header__title" style="width: 60%;">
+                    <div>LA MER</div>
+                </div>
+                <div class="header header__account">
+                    <div style="height: 11px;width: 80px;">
+                        <div class="header__account--signin">SIGN IN</div>
+                    </div>
+                    <div style="height: 11px;width: 120px;">
+                        <div class="header__account--loyalty">JOIN LOYALTY</div>
+                    </div>
+                    <div style="font-size: small;margin-left: 4%;margin-right: 2%;">
+                        (1) <i class="fa fa-shopping-bag"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- header menu -->
+            <div class="header header__menu">
+                <div class="header header__menu-item">
+                    <ul>
+                        <li><a href=#>Crème DE LA MER</a></li>
+                        <li><a href=#>BESTSELLERS</a></li>
+                        <li><a href=#>FACE</a></li>
+                        <li><a href=#>BODY</a></li>
+                        <li><a href=#>SKINCOLOR</a></li>
+                        <li><a href=#>HOLIDAY GIFTS</a></li>
+                        <li><a href=#>LIVE</a></li>
+                        <li><a href=#>COLLECTIONS</a></li>
+                        <li><a href=#>DISCOVER</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header__carousal">
+                <div id="textMessage" style="padding-bottom: 1px;"></div>
+                <div class="textContent">
+                    <h2 style="padding:5px;font-size:15px;font-weight:200;font-family: sans-serif;">
+                        Select 5 of your favorite deluxe minis with any $150 purchase.
+                    </h2>
+                </div>
+                <div class="textContent">
+                    <h2 style="padding:5px;font-size:15px;font-weight:200;font-family: sans-serif;">
+                    Complimentary Shipping, Gift Wrap & Samples with Every Order.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="header__sort">
+                <select class="header__sort--button" name="pets" id="pet-select" onchange="pickSort(value)" >
+                    <option value="none">SORT BY:</option>
+                    <option value="lowtohigh">PRICE(LOW TO HIGH)</option>
+                    <option value="hightolow">PRICE(HIGH TO LOW)</option>
+                    <option value="highrating">HIGHEST RATED</option>
+                    <option value="new">NEW</option>
+                </select>
+            </div>
+
+        </div>
+        
+        <!-- product display view from Mustache-->
+        <div class="body"> 
+            <!-- filter at the left panel -->
+            <div class="body__filter">
+                <div class="body__filter-warp">
+                    <div style="display: flex;">
+                        <div class="body__filter--counter" id="category_counter"></div>
+                        <div style="font-family: sans-serif;font-size: 14px;">items</div>
+                    </div>
+                    <div id="clearall" class="body__filter--clearall" onclick="clearAllFilters()"></div>
+                    <div id="categories"></div>
+                </div>
+            </div>
+        
+            <div id="target" class="body__display"></div>
+        </div>
+
+        <!-- footer view loaded from Mustache -->
+        <div id="footer"></div>
+
+    </body>
+
+</html>

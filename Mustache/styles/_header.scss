@@ -1,0 +1,122 @@
+.header{
+
+    text-align: center;
+
+    .header__language{
+      display:flex;
+      width: 20%;
+      align-self: center;
+      justify-content: flex-end;
+
+      .header__language-wrap{
+        display:flex;
+        height: 11px;
+        width: 120px;
+        border-right: 1px solid #d7d7d7;
+  
+        .header__language-wrap--language{
+          font-size: 12px;
+          margin-left: 6%;
+          font-family: sans-serif;
+          letter-spacing: .4px;
+        }
+      }
+  
+      .header__email-wrap{
+        height: 11px;
+        width: 120px;
+  
+        .header__email-wrap--email{
+          font-size: 12px;
+          font-family: sans-serif;
+          letter-spacing: .4px;
+    
+        }
+      }
+    }
+  
+    .header__account{
+      width: 20%;
+      display:flex;
+      justify-content: center;
+      align-self: center;
+
+      .header__account--signin{
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: .4px;
+        border-right: 1px solid #d7d7d7;
+      }
+
+      .header__account--loyalty{
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: .4px;
+        border-right: 1px solid #d7d7d7;
+      }
+    }
+
+    .header__carousal{
+      border-top: solid 1px #c2c2c2;
+      background-color:#eeeeee;
+    }
+
+    .header__sort{
+      
+      padding-bottom: 20px;
+      text-align: end;
+      margin-right: 10%;
+      padding-top: 10px;
+
+      .header__sort--button{
+        padding: 8px;
+        border: 1px solid #c2c2c2;
+        width: 150px;
+        height:40px;
+        border-radius: 4px;
+        font-size: 11px;
+      }
+    }
+
+
+    .header__menu {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .header__title{
+      font-size: xx-large;
+      text-align: center;
+      font-family: serif;
+      font-weight: 100;
+    }
+
+    .header__menu-item {
+      overflow: hidden;
+      background-color:white;
+      top: 0;
+      width: 100%;
+      ul {
+        text-align: center;
+        list-style-type: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+        li {
+          display: inline;
+          font-family: "Fira Sans", sans-serif;
+          font-size: 17px;
+          a {
+            color: #1b1b1b;
+            font-family: La Mer Text;
+            text-decoration: none;
+            padding: 14px;
+            &:hover {
+              color: darkgreen;
+            }
+          }
+        }
+      }
+    }
+
+}

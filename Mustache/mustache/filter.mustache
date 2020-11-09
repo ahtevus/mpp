@@ -1,0 +1,13 @@
+<div class="body__filter-header">CATEGORY</div>
+{{#categories}}
+<div>
+    <div class="body__filter-element" onclick="categoryfilter(this,event)">{{title}}</div>
+</div>
+{{/categories}}
+
+<div class="body__filter-header">BENEFITS</div>
+{{#benefits}}
+<div>
+    <div class="body__filter-element" onclick="benefitfilter(this,event)">{{title}}</div>
+</div>
+{{/benefits}}

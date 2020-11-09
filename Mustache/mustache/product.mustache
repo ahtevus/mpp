@@ -1,0 +1,21 @@
+{{#products}}
+<div class="product">
+    
+    <img class="product__card--bottom" src="assets/image/{{filename_front}}" alt="Card Back">
+    <img class="product__card--top" src="assets/image/{{filename_back}}"     alt="Card Front">
+    <div class="product__header">{{title}}</div>
+    <div class="product__description">{{description}}</div>
+    <div class="product__price">from $ {{price}} / {{sizes}} sizes</div>
+    <div style="display:flex;display: flex;justify-content: center;margin-top: 3%;">
+        <div><i class="fa fa-star"></i></div>
+        <div><i class="fa fa-star"></i></div>
+        <div><i class="fa fa-star"></i></div>
+        <div><i class="fa fa-star"></i></div>
+        <div><i class="fa fa-star-half-empty"></i></div>
+    </div>
+    <div class="product__quickshop">QUICK SHOP</div>
+    <div class="product__wishlist">ADD TO WISHLIST</div>
+    </div>
+</div>
+{{/products}}
+
